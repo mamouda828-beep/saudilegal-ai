@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+  font-family: 'Tajawal', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Remove Bolt platform badge / watermark for a fully independent UI */
+a[href*="bolt.new"],
+a[href*="bolt.new/"],
+[href*="bolt.new"] img,
+[href*="bolt.new"] svg,
+[id*="bolt"],
+[class*="bolt-badge"],
+[class*="bolt-watermark"],
+[class*="made-in-bolt"],
+[class*="powered-by-bolt"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
